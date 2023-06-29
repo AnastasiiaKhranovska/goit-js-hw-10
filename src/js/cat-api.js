@@ -1,6 +1,3 @@
-const BASE_URL = 'https://api.thecatapi.com';
-const API_KEY = 'live_KHBqAXcbXFc8kdDImgUQExzJaGKqaAXWcluBhZtT60cl3dTFQ6HhALcZNqLnuH3D';
-
 export function fetchBreeds() {
   const URL_API = `${BASE_URL}/v1/breeds?api_key=${API_KEY}`;
 
