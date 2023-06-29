@@ -4,6 +4,9 @@ h2{
 h3{
   font-size: 22px;
 }
+.invisible{
+  visibility: hidden;
+}
 .cat-info{
   display: flex;
   flex-direction: row;
@@ -14,6 +17,23 @@ h3{
   width: 600px;
   font-size: 20px;
 }
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+}
+.loader:after {
+  box-shadow: 0 2px 0 #0004ff inset;
+  animation: rotate 2s linear infinite;
+}
 @keyframes rotate {
   0% {
       transform: rotate(0)
@@ -22,15 +42,15 @@ h3{
       transform: rotate(360deg)
   }
 }
-.photo {
+.centered {
   position: fixed;
   top: 50%;
   left: 50%;
 }
-select {
-  background-color: rgb(191, 216, 245);
+select { 
+  background-color: rgb(208, 234, 245);
   border: thin solid blue;
-  border-radius: 6px;
+  border-radius: 4px;
   display: inline-block;
   font: inherit;
   line-height: 1.5em;
@@ -48,7 +68,7 @@ select.breed-select {
   background-image:
       linear-gradient(45deg, transparent 50%, blue 50%),
       linear-gradient(135deg, blue 50%, transparent 50%),
-      linear-gradient(to right, yellow, yellow);
+      linear-gradient(to right, yellow, yellow  );
   background-position:
       calc(100% - 20px) calc(1em + 2px),
       calc(100% - 15px) calc(1em + 2px),
